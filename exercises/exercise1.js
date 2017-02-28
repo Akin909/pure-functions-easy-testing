@@ -1,33 +1,37 @@
 
-var addOne = function () {
-  constantNumber += 1;
-  return constantNumber;
+var addOne = function (constantNumber) {
+	var addedOne = constantNumber + 1;
+  return addedOne;
 };
 
 
-var timesTwo = function () {
-  constantNumber = constantNumber * 2
-  return constantNumber
+var timesTwo = function (constantNumber) {
+	var multTwo = constantNumber = constantNumber * 2
+  return multTwo;
 };
 
 
-var incrementArray = function (array) {
-  array.forEach(function(x, i) {
-    array[i] =  x + 1;
+var incrementArray = function (constantArray) {
+ var incArray =  constantArray.map(function(x, i) {
+    return x+1;
   })
-  return array
+  return incArray
 }
 
 var addNumberArray = function (array, number) {
-  array.push(number);
-  return array;
+  var pureArr = array.map(function(x, i){
+    return x;
+  })
+  pureArr.push(number);
+  return pureArr;
 };
 
 var incrementObject = function (object) {
+  var newObject = {};
   Object.keys(object).forEach(function(x) {
-    object[x] = object[x] + 1
+    newObject[x] = object[x] + 1;
   });
-  return object;
+  return newObject;
 };
 
 // leave me alone :) :) :) <3 <3 <3
